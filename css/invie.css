@@ -1,3 +1,43 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?c13ccw');
+  src:  url('../fonts/icomoon.eot?c13ccw#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?c13ccw') format('truetype'),
+    url('../fonts/icomoon.woff?c13ccw') format('woff'),
+    url('../fonts/icomoon.svg?c13ccw#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-email:before {
+  content: "\e900";
+}
+.icon-menu:before {
+  content: "\e901";
+}
+.icon-close:before {
+  content: "\e902";
+}
+.icon-phone:before {
+  content: "\e903";
+}
+
 * {
 /*   padding: 0; */
 }
@@ -7,7 +47,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  max-width: 800px;
   margin: auto;
   position: relative;
 }
@@ -44,6 +84,7 @@ input:focus, textarea:focus {
 }
 
 .background {
+  background-color: #466173;
   background-image: url("../images/background.png");
   background-size: cover;
 }
@@ -204,7 +245,7 @@ footer .container {
 
 .formulario {
   display: flex;
-  width: 400px;
+  width: 420px;
   color: white;
 }
 
@@ -243,4 +284,277 @@ footer .container {
 
 .tabla {
   margin: 50px 0;
+}
+
+.burguer-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  background: #395667;
+  display: inline-block;
+  text-align: center;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+  color: white;
+  z-index: 3;
+  display: none;
+}
+
+.video-responsive-contenedor {
+  position: relative;
+  padding-top: 56.4%;
+}
+
+.video-responsive-src {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-demo-contenedor {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+
+}
+
+.video-demo {
+  max-width: 500px;
+  width: 100%;
+  border: 5px solid #3c5b6e;
+}
+
+@media screen and (max-width: 800px) {
+  .tabla {
+    margin: 50px 20px;
+  }
+
+  .container .tabla {
+    overflow: auto;
+    border: 1px solid #273b47;
+  }
+
+  .titulo {
+    font-size: 45px;
+    margin-top: 30px;
+  }
+
+  .title-a {
+    font-size: 18px;
+  }
+
+  .portada {
+    height: auto;
+  }
+
+  .portada .button {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  .guitarras {
+    text-align: center;
+  }
+
+  .left, .right {
+    float: none;
+    position: static;
+
+  }
+  .title-b {
+    margin: 0;
+  }
+
+  .guitarra li {
+    list-style: none;
+  }
+
+  .guitarra.b {
+    height: auto;
+  }
+
+  .contenedor-guitarra-b {
+    position: static;
+    margin: 0;
+  }
+
+  .video-demo-contenedor {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer .container {
+    display: block;
+  }
+
+  .contacto {
+    margin:  0 auto;
+  }
+
+  .formulario {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+  }
+
+  .intereses label {
+    display: block;
+    font-size: 16px;
+  }
+
+  .col1 {
+    margin: 0;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    zoom: 1.3;
+  }
+}
+
+@media screen and (max-width: 650px){
+  header {
+    text-align: center;
+  }
+
+  .logotipo {
+    margin: 0;
+  }
+
+  .menu {
+    position: static;
+    display: block;
+  }
+
+  .menu li:first-child {
+    margin: 0;
+  }
+
+  .menu ul {
+    padding: 0;
+  }
+
+  .contenedor-guitarra-a {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* .portada .button{
+    display: block;
+  }
+
+  .col2 {
+    align-items: stretch;
+  } */
+
+  .precios header .logotipo {
+    margin: 50px 0;
+  }
+
+  .burguer-button {
+    display: block;
+  }
+
+  .portada .container {
+    position: static;
+  }
+
+  header {
+    position: static;
+  }
+
+  header .container {
+    position: static;
+  }
+
+  .menu {
+    background: rgba(255, 60, 88, .8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: .3s;
+  }
+
+  .menu.active {
+    left: 0;
+  }
+
+  .menu ul {
+    flex: 1;
+  }
+
+  .menu li {
+    display: block;
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid white;
+  }
+
+  .menu li:before {
+    display: none;
+  }
+
+  .menu li:first-child {
+    border-top: 1px solid white;
+  }
+
+  .portada {
+    text-align: center;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+
+  .title-a {
+    font-size: 16px;
+  }
+
+  .guitarras h2 {
+    font-size: 27px;
+  }
+
+  .guitarra img {
+    width: 200px;
+    height: auto;
+  }
+
+  .video-demo-contenedor {
+    margin: 0 10px 30px 10px;
+  }
+
+  .title-b {
+    font-size: 30px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .background {
+    background-image: url(../images/background2x.png);
+  }
 }

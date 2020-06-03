@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="css/invie.css">
     <link href="https://fonts.googleapis.com/css2?family=Allerta&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="precios">
     <header class="background">
       <div class="container">
         <figure class="logotipo">
           <img src="images/invie.png" alt="Invie logotipo" width="186" height="60">
         </figure>
-        <nav class="menu">
+        <span class="burguer-button icon-menu" id="burguer-button"></span>
+        <nav class="menu" id="menu">
           <ul>
             <li>
               <a href="index.html">Home</a>
@@ -36,6 +37,9 @@
               <th>Modelo</th>
               <th>Precio</th>
               <th>Descripción</th>
+              <th>Modelo</th>
+              <th>Precio</th>
+              <th>Descripción</th>
             </tr>
           </thead>
           <tbody>
@@ -43,13 +47,22 @@
               <td>Invie classic</td>
               <td>$100000</td>
               <td>Una guitarra muy pro</td>
-            </tr>
-            <tr>
               <td>Invie classic</td>
               <td>$100000</td>
               <td>Una guitarra muy pro</td>
             </tr>
             <tr>
+              <td>Invie classic</td>
+              <td>$100000</td>
+              <td>Una guitarra muy pro</td>
+              <td>Invie classic</td>
+              <td>$100000</td>
+              <td>Una guitarra muy pro</td>
+            </tr>
+            <tr>
+              <td>Invie classic</td>
+              <td>$100000</td>
+              <td>Una guitarra muy pro</td>
               <td>Invie classic</td>
               <td>$100000</td>
               <td>Una guitarra muy pro</td>
@@ -102,5 +115,29 @@
         </form>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+    <script>
+      var consulta = window.matchMedia('(max-width: 800px)');
+      consulta.addListener(mediaQuery);
+
+      var $burguerButton = document.getElementById('burguer-button');
+      var $menu = document.getElementById('menu');
+      function toggleMenu(){
+        $menu.classList.toggle('active')
+      };
+
+      function mediaQuery () {
+        if (consulta.matches) {
+          $burguerButton.addEventListener('touchstart', toggleMenu)
+        } else {
+          $burguerButton.removeEventListener('touchstart', toggleMenu)
+        }
+      }
+      mediaQuery();
+
+      var bLazy = new Blazy({
+        selector: 'img'
+      });
+    </script>
   </body>
 </html>
