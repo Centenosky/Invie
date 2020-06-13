@@ -224,7 +224,7 @@ footer .container {
 
 .contacto {
   display: flex;
-  width: 330px;
+  width: 300px;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -259,7 +259,7 @@ footer .container {
 }
 
 .col1 {
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 .col2 {
@@ -396,7 +396,18 @@ footer .container {
   }
 
   .contacto {
-    margin:  0 auto;
+    margin:  15px auto;
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .contacto a {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .sexo label {
+    margin-right: 20px;
   }
 
   .formulario {
@@ -404,14 +415,18 @@ footer .container {
     margin: 0 auto;
     width: 300px;
   }
-
+  
   .intereses label {
     display: block;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .col1 {
     margin: 0;
+  }
+
+  input[type="text"] {
+    margin-bottom: 20px;
   }
 
   input[type="text"],
